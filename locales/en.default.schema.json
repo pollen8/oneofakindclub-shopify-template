@@ -225,9 +225,6 @@
     "animations": {
       "name": "Animations",
       "settings": {
-        "animations_reveal_on_scroll": {
-          "label": "Reveal sections on scroll"
-        },
         "animations_hover_elements": {
           "options__1": {
             "label": "None"
