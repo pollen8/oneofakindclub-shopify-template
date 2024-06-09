@@ -203,18 +203,31 @@
 }
 
 .shopify-payment-button__button {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   letter-spacing: 0.1rem;
 }
 
 /* Product info */
 
 .product__info-container > * + * {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .product__info-container iframe {
   max-width: 100%;
+}
+
+.product__info-container {
+  h1 {
+    color: var(--purple);
+  }
+  .product__title {
+    margin-bottom: 1rem;
+  }
+  .price-item {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
 }
 
 .product__info-container .product-form,
