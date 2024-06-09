@@ -1,5 +1,4 @@
 :root {
-  --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
   --alpha-badge-border: 0.1;
@@ -1159,7 +1158,6 @@ deferred-media {
 }
 
 .button--tertiary {
-  --alpha-button-background: 0;
   --alpha-button-border: 0.2;
 }
 
@@ -1214,7 +1212,7 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background-color: var(--color-button);
 }
 
 .button:before,
@@ -1249,7 +1247,7 @@ button.shopify-payment-button__button--unbranded {
   border-radius: var(--buttons-radius);
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+    0 0 0 var(--buttons-border-width) var(--color-button);
   transition: box-shadow var(--duration-short) ease;
 }
 
@@ -1260,7 +1258,7 @@ button.shopify-payment-button__button--unbranded {
   --border-offset: 1.3px;
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+    0 0 0 calc(var(--buttons-border-width) + 1px) var(--color-button);
 }
 
 .button--secondary:after {
@@ -2052,7 +2050,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-button));
+  background-color: var(--color-button);
   color: rgb(var(--color-button-text));
   height: 1.2rem;
   width: 1.2rem;
@@ -3266,7 +3264,7 @@ details[open] > .header__menu-item .icon-caret {
     --border-offset: 0.3px; /* Default is 1.3px as defined above in this file. This removes 1px to prevent the border from growing on buttons when this effect is on.  */
     box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
         rgba(var(--color-button-text), var(--border-opacity)),
-      0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+      0 0 0 var(--buttons-border-width) var(--color-button);
   }
 
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
@@ -3563,5 +3561,5 @@ header.header {
 }
 
 .search-modal {
-  margin-top: 7.2rem;
+  margin-top: 6.4rem;
 }
