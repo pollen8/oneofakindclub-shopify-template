@@ -362,21 +362,6 @@
   box-shadow: 0 0 0.2rem 0 rgba(var(--color-foreground), 0.3);
 }
 
-/* Header icons (desktop) */
-.desktop-localization-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.desktop-localization-wrapper .localization-selector + .disclosure__list-wrapper {
-  animation: animateMenuOpen var(--duration-default) ease;
-}
-
-.desktop-localization-wrapper .localization-form:only-child {
-  padding: 0;
-}
-
 .header-localization:not(.menu-drawer__localization) {
   align-items: center;
 }
