@@ -117,10 +117,6 @@
         "background": {
           "label": "Background"
         },
-        "background_gradient": {
-          "label": "Background gradient",
-          "info": "Background gradient replaces background where possible."
-        },
         "text": {
           "label": "Text"
         },

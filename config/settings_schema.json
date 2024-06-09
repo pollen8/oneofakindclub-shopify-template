@@ -47,12 +47,6 @@
             "default": "#FFFFFF"
           },
           {
-            "type": "color_background",
-            "id": "background_gradient",
-            "label": "t:settings_schema.colors.settings.background_gradient.label",
-            "info": "t:settings_schema.colors.settings.background_gradient.info"
-          },
-          {
             "type": "color",
             "id": "text",
             "label": "t:settings_schema.colors.settings.text.label",
@@ -86,8 +80,7 @@
         "role": {
           "text": "text",
           "background": {
-            "solid": "background",
-            "gradient": "background_gradient"
+            "solid": "background"
           },
           "links": "secondary_button_label",
           "icons": "text",

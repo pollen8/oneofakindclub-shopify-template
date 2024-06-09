@@ -315,9 +315,3 @@ h2,
     display: none;
   }
 }
-
-.gradient {
-  background: rgb(var(--color-background));
-  background: var(--gradient-background);
-  background-attachment: fixed;
-}

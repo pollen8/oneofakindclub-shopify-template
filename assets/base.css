@@ -291,13 +291,13 @@ h5,
 
 h1,
 .h1 {
-  font-size: calc(var(--font-heading-scale) * 3rem);
+  font-size: 1.8rem;
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    font-size: 2rem;
   }
 }
 
@@ -2054,16 +2054,16 @@ product-info .loading__spinner:not(.hidden) ~ *,
   position: absolute;
   background-color: rgb(var(--color-button));
   color: rgb(var(--color-button-text));
-  height: 1.7rem;
-  width: 1.7rem;
+  height: 1.2rem;
+  width: 1.2rem;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   bottom: 0.8rem;
   left: 2.2rem;
-  line-height: calc(1 + 0.1 / var(--font-body-scale));
+  line-height: 1.2rem;
 }
 
 /* utility-bar */
@@ -2713,11 +2713,6 @@ details[open] > .header__menu-item .icon-caret {
   word-break: break-word;
 }
 
-.gradient {
-  background: rgb(var(--color-background));
-  background: var(--gradient-background);
-  background-attachment: fixed;
-}
 
 @media screen and (forced-colors: active) {
   .icon {
