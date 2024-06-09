@@ -3282,3 +3282,291 @@ details[open] > .header__menu-item .icon-caret {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+/** One of a kind club ***/
+
+
+header.header {
+
+  h1 {
+    margin: 0;
+  }
+
+  position: sticky;
+  top: 0rem;
+  left: 0;
+  width: 100%;
+  height: 6.7rem;
+  background: #fff;
+  z-index: 100;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  button {
+    background: #fff;
+    color: #666;
+    display: inline;
+    width: auto;
+  }
+
+  button:hover {
+    background-color: #fff;
+    color: var(--purple)
+  }
+
+  nav {
+    width: 100%;
+    animation: slideOn ease-in 0.4s forwards;
+    animation-direction: reverse;
+    transform: translateX(-105%);  
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 110;
+    top: 0;
+  }
+
+
+  .mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+
+    #closeMenu {
+      opacity: 0;
+      transition: opacity 0.3s ease-in 0.1s;
+      transition-delay: 1s;
+      z-index: 120;
+    }
+    
+    img {
+      display: block;
+      width: 4rem;
+      padding-left: 1rem;
+    }
+  }
+
+  nav.open {
+    animation: slideIn ease-in 0.4s forwards;
+    #closeMenu {
+      opacity: 1; 
+    }
+  }
+
+  nav.open li {
+    opacity: 0;
+    animation: moveup ease-in-out 0.4s forwards 1;
+    animation-delay: .4s;
+  }
+  ul.browser {
+    display: none;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    width: 100%;
+    li {
+      text-transform: capitalize;
+      margin-right: 2rem;
+      .gradient-border {
+        --borderWidth: 1px;
+        position: relative;
+        border-radius: var(--borderWidth);
+        z-index: 110;
+      }
+
+      .active.gradient-border:after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: calc(10 * var(--borderWidth));
+        height: calc(100% - 43px);
+       
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        border-radius: calc(2 * var(--borderWidth));
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+      }
+  
+      &:hover a::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: calc(10 * var(--borderWidth));
+        height: calc(100% - 43px);
+       
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        border-radius: calc(2 * var(--borderWidth));
+        z-index: -1;
+        animation: animatedgradienthoveer .5s ease;
+        background-size: 300% 300%;
+      }
+
+      a {
+        display: block;
+        padding: 0.75rem;
+      }
+    }
+  }
+
+  .rightHeader {
+    position: absolute;
+    top: 2.3rem;
+    right: 2rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 1.8rem;
+  }
+}
+
+
+@keyframes slideIn{
+  from {
+    transform: translateX(-105%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes moveup {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animatedgradienthoveer {
+  0% {
+    width: 0;
+		background-position: 0% 50%;
+	}
+  
+	100% {
+    width: 100%;
+		background-position: 0% 50%;
+	}
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/** Browser window **/
+
+@media (min-width: 768px) {
+  header.header {
+    position: initial;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 1rem 3rem 1rem 2.5rem;
+    height: auto;
+
+    #toggleMenu,
+    #closeMenu {
+      display: none;
+    }
+
+    .logo {
+      display: block;
+    }
+    nav {
+      transform: none;
+      transition: none;
+      animation: none;
+      position: initial;
+      width: auto;
+      flex-grow: 1;
+      align-content: center;
+      display: flex;
+    }
+
+    .rightHeader {
+      display: flex;
+      align-content: center;
+      position: initial;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .mobile-menu-header{ 
+      display: none;
+    }
+    ul.mobile {
+      display:none;
+    }
+    ul.browser {
+      display: flex;
+    }
+    ul {
+      display: flex;
+      li {
+        padding: 0;
+        a {
+          padding: 0;
+          margin: 0;
+        }
+        margin: 0 0.75rem;
+  
+        .gradient-border {
+          --borderWidth: 1px;
+          position: relative;
+          border-radius: var(--borderWidth);
+        
+        }
+     
+        .active.gradient-border:after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: calc(-1 * var(--borderWidth));
+          height: calc(100% - 18px);
+         
+          width: calc(100% + var(--borderWidth) * 2);
+          background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+          border-radius: calc(2 * var(--borderWidth));
+          z-index: -1;
+          animation: animatedgradient 3s ease alternate infinite;
+          background-size: 300% 300%;
+        }
+    
+        &:hover a::after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: calc(-1 * var(--borderWidth));
+          height: calc(100% - 18px);
+         
+          width: calc(100% + var(--borderWidth) * 2);
+          background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+          border-radius: calc(2 * var(--borderWidth));
+          z-index: -1;
+          animation: animatedgradienthoveer .2s ease;
+          background-size: 300% 300%;
+        }
+      }
+    }
+  }
+}
