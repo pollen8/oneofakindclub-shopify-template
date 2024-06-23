@@ -38,7 +38,7 @@
       assign brand_empty = true
     endif
 
-    if section.blocks.size == 1 and section.blocks[0].type == 'brand_information' and brand_empty and has_social_icons == false and section.settings.newsletter_enable == false and section.settings.enable_follow_on_shop == false
+    if section.blocks.size == 1 and section.blocks[0].type == 'brand_information' and brand_empty and has_social_icons == false and section.settings.newsletter_enable == false 
       assign only_empty_brand = true
     endif
   -%}
@@ -46,7 +46,6 @@
     or section.settings.newsletter_enable
     or section.settings.show_social
     and has_social_icons == true
-    or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
       <div class="footer__content-top page-width">
@@ -220,15 +219,6 @@
             </div>
           {%- endif -%}
 
-          {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
-            <div class="footer__follow-on-shop">
-              {% comment %} TODO: enable theme-check once `login_button` is accepted as valid filter {% endcomment %}
-              {% # theme-check-disable %}
-              {{ shop | login_button: action: 'follow' }}
-              {% # theme-check-enable %}
-            </div>
-          {%- endif -%}
-
           {%- if section.settings.show_social and has_social_icons -%}
             {%- render 'social-icons', class: 'footer__list-social' -%}
           {%- endif -%}
@@ -389,12 +379,6 @@
     }
   ],
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "enable_follow_on_shop",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_follow_on_shop.label"
-    },
     {
       "type": "header",
       "content": "t:sections.footer.settings.header__3.content",
