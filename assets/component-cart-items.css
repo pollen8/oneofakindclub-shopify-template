@@ -170,10 +170,15 @@ cart-remove-button .icon-remove {
 
 .cart-item__error {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  gap: 0.5rem;
   margin-top: 0.2rem;
   width: min-content;
   min-width: 100%;
+
+  small {
+    display: block;
+  }
 }
 
 .cart-item__error-text {
@@ -186,8 +191,6 @@ cart-remove-button .icon-remove {
   flex-shrink: 0;
   width: 1.5rem;
   height: 1.5rem;
-  margin-right: 0.7rem;
-  margin-top: 0.25rem;
 }
 
 .cart-item__error-text:empty + svg {
