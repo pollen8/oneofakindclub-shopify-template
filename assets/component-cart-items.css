@@ -1,5 +1,5 @@
 cart-items .title-wrapper-with-link {
-  margin-top: 0;
+  margin-top: 1rem;
 }
 
 .cart-items td,
@@ -10,7 +10,7 @@ cart-items .title-wrapper-with-link {
 
 .cart-items th {
   text-align: left;
-  padding-bottom: 1.8rem;
+  padding-bottom: 1rem;
   opacity: 0.85;
   font-weight: normal;
 }
@@ -172,7 +172,7 @@ cart-remove-button .icon-remove {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.2rem;
+  margin-top: 1rem;
   width: min-content;
   min-width: 100%;
 
@@ -306,9 +306,6 @@ cart-remove-button .icon-remove {
     margin-top: 1rem;
   }
 
-  .cart-item__error {
-    margin-left: 0.3rem;
-  }
 }
 
 @media screen and (min-width: 990px) {
