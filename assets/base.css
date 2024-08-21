@@ -3,8 +3,10 @@
   --alpha-link: 0.85;
   --alpha-badge-border: 0.1;
   --purple: hsl(273, 69%, 22%);
+  --purple : #681285;
   --text: #fff;
   --teal500: hsl(200, 100%, 17%);
+  --grey300: hsl(226.7, 13.4%, 73.7%);
 }
 
 a {
@@ -1147,6 +1149,16 @@ deferred-media {
   --alpha-button-border: 0.2;
 }
 
+.button {
+  border: 0;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.button:hover {
+  background-color: hsl(333, 98%, 74%);
+}
+
 .button,
 .shopify-challenge__button,
 .customer button,
@@ -1199,51 +1211,7 @@ button.shopify-payment-button__button--unbranded {
   background-color: var(--color-button);
 }
 
-.button:before,
-.shopify-challenge__button:before,
-.customer button:before,
-.shopify-payment-button__button--unbranded:before,
-.shopify-payment-button [role='button']:before,
-.cart__dynamic-checkout-buttons [role='button']:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: var(--buttons-radius-outset);
-  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
-    rgba(var(--color-shadow), var(--shadow-opacity));
-}
 
-.button:after,
-.shopify-challenge__button:after,
-.customer button:after,
-.shopify-payment-button__button--unbranded:after {
-  content: '';
-  position: absolute;
-  top: var(--buttons-border-width);
-  right: var(--buttons-border-width);
-  bottom: var(--buttons-border-width);
-  left: var(--buttons-border-width);
-  z-index: 1;
-  border-radius: var(--buttons-radius);
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
-      rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 var(--buttons-border-width) var(--color-button);
-  transition: box-shadow var(--duration-short) ease;
-}
-
-.button:not([disabled]):hover::after,
-.shopify-challenge__button:hover::after,
-.customer button:hover::after,
-.shopify-payment-button__button--unbranded:hover::after {
-  --border-offset: 1.3px;
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
-      rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) var(--color-button);
-}
 
 .button--secondary:after {
   --border-opacity: var(--buttons-border-opacity);
@@ -1521,10 +1489,11 @@ details[open] > .share-button__fallback {
 .customer .field input,
 .customer select {
   -webkit-appearance: none;
-  box-shadow: 0 0 0 calc( var(--inputs-border-width)) rgba(var(--color-foreground));
+  box-shadow: 0 0 0 calc( var(--inputs-border-width)) var(--grey300);
   appearance: none;
   background-color: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
+  
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
@@ -1578,7 +1547,7 @@ details[open] > .share-button__fallback {
 .customer .field input:focus-visible,
 .customer select:focus-visible,
 .localization-form__select:focus-visible.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.01rem + var(--inputs-border-width)) rgba(var(--color-foreground));
+  box-shadow: 0 0 0 calc(0.01rem + var(--inputs-border-width)) var(--grey300);
   outline: 0;
   border-radius: var(--inputs-radius);
 }
@@ -1588,7 +1557,7 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer select:focus,
 .localization-form__select:focus.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.01rem + var(--inputs-border-width)) rgba(var(--color-foreground));
+  box-shadow: 0 0 0 calc(0.01rem + var(--inputs-border-width)) var(--grey300);
   outline: 0;
   border-radius: var(--inputs-radius);
 }
@@ -2226,10 +2195,6 @@ product-info .loading__spinner:not(.hidden) ~ *,
   display: block;
   position: relative;
   background-color: rgb(var(--color-background));
-}
-
-.header-wrapper--border-bottom {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
 .header {
@@ -3180,7 +3145,9 @@ details[open] > .header__menu-item .icon-caret {
 }
 /** One of a kind club ***/
 
-
+#MainContent {
+  margin-top: 2rem;
+}
 header.header {
 .header__heading-logo-wrapper {
   display: flex;

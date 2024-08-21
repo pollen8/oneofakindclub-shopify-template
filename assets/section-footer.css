@@ -116,7 +116,8 @@
 
 @media screen and (min-width: 750px) {
   .footer-block {
-    display: block;
+    display: flex;
+    justify-content: center;
     margin-top: 0;
   }
 }
@@ -364,9 +365,7 @@
     display: inline-block;
   }
 
-  .footer-block__details-content > :first-child .list-menu__item--link {
-    padding-top: 0;
-  }
+
 }
 
 .footer-block-image {
@@ -395,7 +394,6 @@
 }
 
 .footer-block__image-wrapper {
-  margin-bottom: 2rem;
   overflow: hidden !important;
 }
 
@@ -496,4 +494,10 @@
       padding-left: 3rem;
     }
   }
+}
+
+
+.footer-block__details-content {
+  display: flex;
+  margin: auto;
 }
