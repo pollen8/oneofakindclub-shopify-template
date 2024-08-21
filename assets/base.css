@@ -2,11 +2,23 @@
   --alpha-button-border: 1;
   --alpha-link: 0.85;
   --alpha-badge-border: 0.1;
-  --purple: hsl(273, 69%, 22%);
-  --purple : #681285;
   --text: #fff;
   --teal500: hsl(200, 100%, 17%);
   --grey300: hsl(226.7, 13.4%, 73.7%);
+  /** new brand **/
+  --purple100: #F4E8F9;
+  --purple200: #D5A3E5;
+  --purple300: #B55FD2;
+  --purple400: #951ABE;
+  --purple500: #681285;
+  --purple600: #4B0D5F;
+
+  --blue100: #EBE6FF;
+  --blue200: #B19AFF;
+  --blue300: #764EFE;
+  --blue400: #3B02FE;
+  --blue500: #2901B2;
+  --blue600: #1E017F;
 }
 
 a {
@@ -293,7 +305,7 @@ h1,
 .h1 {
      font-size: 1.6rem;
     font-weight: 600;
-    color: var(--purple); font-size: 1.8rem;
+    color: var(--purple500); font-size: 1.8rem;
 }
 
 
@@ -303,7 +315,7 @@ h2,
   font-size: calc(var(--font-heading-scale) * 2rem);
    font-size:1.5rem;
     font-weight: 600;
-    color: var(--purple); 
+    color: var(--purple500); 
 }
 
 
@@ -572,7 +584,7 @@ details > * {
   text-decoration: underline;
 }
 .underlined-link:hover {
-  color: var(--purple);
+  color: var(--purple500);
 }
 
 .underlined-link,
@@ -1131,12 +1143,16 @@ deferred-media {
 
 /* component-button */
 /* Button - default */
-
 .button--secondary,
 .button--tertiary {
   --color-button: var(--color-secondary-button);
   --color-button-text: var(--color-secondary-button-text);
-  border: 1px solid var(--teal500);
+  border: 1px solid var(--blue400);
+}
+
+.button.button--secondary {
+  background-color: var(--purple200);
+ 
 }
 
 .button--tertiary {
@@ -1150,7 +1166,8 @@ deferred-media {
 }
 
 .button:hover {
-  background-color: hsl(333, 98%, 74%);
+  background-color: var(--purple300);
+   color: #fff;
 }
 
 .button,
@@ -1177,6 +1194,7 @@ button.shopify-payment-button__button--unbranded,
 button.shopify-payment-button__button--unbranded {
   min-width: calc(12rem + var(--buttons-border-width) * 2);
   min-height: 2.5rem;
+  line-height: 0.8rem;
 }
 
 .shopify-payment-button__button--branded {
@@ -2059,7 +2077,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   }
 }
 .utility-bar  {
-  background: var(--purple);
+  background: var(--purple600);
   .slider-button svg path {
     fill: var(--text);
   }
@@ -3167,7 +3185,7 @@ header.header {
 
   button:hover {
     background-color: #fff;
-    color: var(--purple)
+    color: var(--purple500)
   }
 
   nav {
