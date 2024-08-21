@@ -3181,9 +3181,6 @@ header.header {
 
   nav {
     width: 100%;
-    animation: slideOn ease-in 0.4s forwards;
-    animation-direction: reverse;
-    transform: translateX(-105%);  
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -3192,24 +3189,52 @@ header.header {
     top: 0;
   }
 
-
-  .mobile-menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0.5rem;
-
-    #closeMenu {
-      opacity: 0;
-      transition: opacity 0.3s ease-in 0.1s;
-      transition-delay: 1s;
-      z-index: 120;
-    }
-    
-    img {
+  .menu-drawer__navigation ul {
       display: block;
-      width: 4rem;
-      padding-left: 1rem;
+
+      li {
+        height: 2rem;
+        position: relative;
+
+        
+        .gradient-border {
+          --borderWidth: 1px;
+          position: relative;
+          border-radius: var(--borderWidth);
+          z-index: 110;
+        }
+
+        a.menu-drawer__menu-item--active::after {
+          content: '';
+          position: absolute;
+          bottom: -7px;
+          left: 10px;
+          height: 4px;
+        
+          width: 100%;
+          background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+          border-radius: 2px;
+          z-index: 0;
+          animation: animatedgradient 3s ease alternate infinite;
+          background-size: 300% 300%;
+        }
+    
+        &:hover a::after {
+          content: "";
+          position: absolute;
+          bottom: -7px;
+          left: 10px;
+          height: 4px;
+          width: 100%;
+          background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+          background-size: auto;
+          border-radius: 2px;
+          z-index: 0;
+          animation: animatedgradienthoveer .5s ease;
+          /* background-size: 300% 300%; */
+        }
+      }
+      
     }
   }
 
@@ -3228,7 +3253,7 @@ header.header {
   ul.browser {
     display: none;
   }
-  ul {
+  ul.list-menu {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -3339,7 +3364,7 @@ header.header {
 
 /** Browser window **/
 
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   header.header {
     position: initial;
     display: flex;
@@ -3376,9 +3401,6 @@ header.header {
       gap: 2.5rem;
     }
 
-    .mobile-menu-header{ 
-      display: none;
-    }
     ul.mobile {
       display:none;
     }

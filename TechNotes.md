@@ -18,3 +18,8 @@ https://admin.shopify.com/store/oneofakindclub/themes
 for `oneofakindclub-shopify-template/main` click ... then preview theme
 
 Push updates to github to update.
+
+
+### Rob local dev
+
+get store pw here https://admin.shopify.com/store/robclayburn/online_store/preferences?tutorial=unlock
