@@ -2300,19 +2300,12 @@ product-info .loading__spinner:not(.hidden) ~ *,
   outline: none;
 }
 
-
-
-
-
-
-
-
-
 /* Header icons */
 .header__icons {
+  flex-grow: 1;
   display: flex;
   grid-area: icons;
-  justify-self: end;
+  justify-content: end;
   padding-right: 0.8rem;
 }
 
@@ -2396,10 +2389,6 @@ menu-drawer + .header__search {
 
 .header--top-center header-drawer {
   grid-area: left-icons;
-}
-
-.header:not(.header--has-menu) * > .header__search {
-  display: none;
 }
 
 .header__search {
