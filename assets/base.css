@@ -2293,9 +2293,6 @@ product-info .loading__spinner:not(.hidden) ~ *,
     grid-template-columns: 1fr auto 1fr;
   }
 
-  .header:not(.header--middle-left, .header--middle-center) {
-    margin-top: 1.05rem;
-  }
 }
 
 .header *[tabindex='-1']:focus {
@@ -3388,6 +3385,12 @@ header.header {
 	}
 }
 
+@media(max-width: 750px) {
+  .header__heading-logo  {
+    width: 100px;
+    height: 100px;
+  }
+}
 /** Browser window **/
 
 @media (min-width: 750px) {
@@ -3397,7 +3400,7 @@ header.header {
     align-items: center;
     justify-content: flex-start;
     gap: 2rem;
-    padding: 1rem 3rem 1rem 3rem;
+    padding: 0rem 3rem;
     height: auto;
 
     #toggleMenu,
