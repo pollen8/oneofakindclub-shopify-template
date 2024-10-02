@@ -1243,10 +1243,11 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  /* background-color: var(--color-button); */
   background-color: var(--pink200);
-  color: var(--pink600);
+  color: var(---pink500);
+  font-weight: 700;
 }
+
 
 
 
