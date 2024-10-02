@@ -19,7 +19,30 @@
   --blue400: #3B02FE;
   --blue500: #2901B2;
   --blue600: #1E017F;
+
+--green100: #F9FFE6;
+--green200: #E8FF9A;
+--green300: #D6FE4E;
+--green400: #C5FE02;
+--green500: #8AB201;
+--green600: #637F01;
+
+--blue100: #E6FEFF;
+--blue200: #99FBFF;
+--blue300: #4DF9FF;
+--blue400: #00F6FF;
+--blue500: #00ACB3;
+--blue600:#007B80;
+
+--pink100: #FFE6F7;
+--pink200: #FF9ADF;
+--pink300: #FF4EC8;
+--pink400: #FF02B0;
+--pink500: #B3017B;
+--pink600: #800158;
+--color-secondary-button: var(--pink600);
 }
+
 
 a {
   text-decoration: none;
@@ -305,7 +328,7 @@ h1,
 .h1 {
      font-size: 1.6rem;
     font-weight: 600;
-    color: var(--purple500); font-size: 1.8rem;
+    color: var(--pink500); font-size: 1.8rem;
 }
 
 
@@ -315,7 +338,7 @@ h2,
   font-size: calc(var(--font-heading-scale) * 2rem);
    font-size:1.5rem;
     font-weight: 600;
-    color: var(--purple500); 
+    color: var(--pink500); 
 }
 
 
@@ -584,7 +607,7 @@ details > * {
   text-decoration: underline;
 }
 .underlined-link:hover {
-  color: var(--purple500);
+  color: var(--pink500);
 }
 
 .underlined-link,
@@ -1166,7 +1189,7 @@ deferred-media {
 }
 
 .button:hover {
-  background-color: var(--purple300);
+  background-color: var(--pink300);
    color: #fff;
 }
 
@@ -1220,7 +1243,8 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: var(--color-button);
+  /* background-color: var(--color-button); */
+  background-color: var(--pink500)
 }
 
 
@@ -2077,12 +2101,14 @@ product-info .loading__spinner:not(.hidden) ~ *,
   }
 }
 .utility-bar  {
-  background: var(--purple600);
+  background: var(--pink200);
   .slider-button svg path {
     fill: var(--text);
+    fill: var(--pink600)
   }
   .announcement-bar__message.h5 {
      color: var(--text);
+     color: var(--pink600)
    }
 }
 
@@ -3185,7 +3211,7 @@ header.header {
 
   button:hover {
     background-color: #fff;
-    color: var(--purple500)
+    color: var(--pink500)
   }
 
   nav {
