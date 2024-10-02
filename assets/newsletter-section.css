@@ -79,9 +79,15 @@
   width: fit-content;
 }
 
-@media screen and (min-width: 750px) {
-  .newsletter__button {
-    flex-shrink: 0;
-    margin: 0 0 0 1rem;
+@media (max-width: 750px) {
+  .newsletter__wrapper {
+    .text-bg { 
+      width: 100%;
+    }
+   .form-grid {
+    
+      grid-template-columns: 1fr;
+      gap: 1rem;
+   } 
   }
 }
