@@ -40,7 +40,7 @@
 --pink400: #FF02B0;
 --pink500: #B3017B;
 --pink600: #800158;
---color-secondary-button: var(--pink600);
+--color-secondary-button: var(--pink200);
 }
 
 
@@ -1174,7 +1174,7 @@ deferred-media {
 }
 
 .button.button--secondary {
-  background-color: var(--purple200);
+  background-color: var(--pink200);
  
 }
 
@@ -1244,7 +1244,8 @@ button.shopify-payment-button__button--unbranded {
   -webkit-appearance: none;
   appearance: none;
   /* background-color: var(--color-button); */
-  background-color: var(--pink500)
+  background-color: var(--pink200);
+  color: var(--pink600);
 }
 
 
@@ -3200,7 +3201,7 @@ header.header {
 
   button:hover {
     background-color: #fff;
-    color: var(--pink500)
+    color: var(--pink300)
   }
 
   nav {
