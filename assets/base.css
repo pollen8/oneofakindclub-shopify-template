@@ -3401,7 +3401,7 @@ header.header {
     justify-content: flex-start;
     gap: 2rem;
     padding: 0rem 3rem;
-    height: auto;
+    height: 140px;
 
     #toggleMenu,
     #closeMenu {
@@ -3420,6 +3420,7 @@ header.header {
       flex-grow: 1;
       align-content: center;
       display: flex;
+      margin-top: -0.951rem;
     }
 
     .rightHeader {
