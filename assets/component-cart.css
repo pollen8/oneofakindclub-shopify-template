@@ -194,6 +194,8 @@ cart-items {
 
 .cart__checkout-button {
   max-width: 36rem;
+  height: 55px;
+  font-weight: bold;
 }
 
 .cart__ctas {
