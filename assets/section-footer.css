@@ -364,8 +364,6 @@
   .footer-block__details-content .list-menu__item--link {
     display: inline-block;
   }
-
-
 }
 
 .footer-block-image {
@@ -500,4 +498,22 @@
 .footer-block__details-content {
   display: flex;
   margin: auto;
+}
+
+@media screen and (max-width: 750px) {
+
+   .footer-block__details-content {
+    display: block;
+   }
+    .footer-block__details-content a {  
+      display: flex;
+      justify-content: center;
+    }
+  
+    .footer-block-image.center {
+
+      display: flex;
+      justify-content: center;
+    }
+
 }
