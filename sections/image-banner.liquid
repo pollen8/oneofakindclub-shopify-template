@@ -47,10 +47,24 @@ section.homepage-image-banner {
     background: hsla(0, 100%, 100%, 0.8);
     padding: 0.5rem 1rem;
     left: 1rem;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 900;
     bottom: 1rem;
+    line-height: 1.9rem;
+    color: var(--blue300)
   }
+
+  .pinkdot {
+    display: inline-block;
+    border-radius: 0.5rem;
+    width: 0.5rem;
+    background: var(--pink500) ;
+    height: 0.5rem;
+    bottom: 0.8rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}
+
 @keyframes fade {
   0% {
     opacity: 1;
@@ -93,27 +107,27 @@ section.homepage-image-banner {
 
   {%- if section.settings.image_4 != blank -%}
       <div class="banner-image" id="pic-4">
-        <div class="strapline">Be you</div>
+        <div class="strapline">Be you<span class="pinkdot"></span></div>
       </div>
   {%endif 
   -%}   
   {%- if section.settings.image_3 != blank -%}
       <div class="banner-image" id="pic-3">
-        <div class="strapline">Celebrate uniqueness</div>
+        <div class="strapline">Celebrate uniqueness<span class="pinkdot"></span></div>
       </div>
     {%endif 
     -%}   
 
     {%- if section.settings.image_2 != blank -%}
       <div class="banner-image" id="pic-2">
-        <div class="strapline">Inspire confidence</div>
+        <div class="strapline">Inspire confidence<span class="pinkdot"></span></div>
       </div>
     {%endif 
     -%}   
     {%- if section.settings.image != blank -%}
       <div class="banner-image" id="pic-1">
         <div class="strapline">
-          Contemporary <br /> jewellery
+          Contemporary <br /> jewellery<span class="pinkdot"></span>
         </div>
     </div>
   {%endif 

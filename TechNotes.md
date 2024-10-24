@@ -1,5 +1,7 @@
+npm install -g @shopify/cli@latest
 shopify theme dev --store robclayburn.myshopify.com    
 
+rob - auth with google fabrikar.com account
 
 >[Note] You cannot use gems with Shopify CLI.
 [LoadError] cannot load such file -- json
