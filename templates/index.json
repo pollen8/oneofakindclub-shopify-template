@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_KgNr4M": {
@@ -24,7 +24,7 @@
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
-        "show_description": false,
+        "show_description": true,
         "description_style": "body",
         "collection": "all",
         "products_to_show": 4,
@@ -47,8 +47,7 @@
     "main": {
       "type": "main-404",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "newsletter_84ey6n": {
       "type": "newsletter",
@@ -68,8 +67,7 @@
         },
         "email_form_pmr3jm": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
