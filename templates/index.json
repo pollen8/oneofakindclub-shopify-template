@@ -55,14 +55,14 @@
         "heading_dqhrrE": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
+            "heading": "Get 15% OFF",
             "heading_size": "h1"
           }
         },
         "paragraph_rN8DCh": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Sign up and unlock your instant discount.</p><p>*Only valid for one purchase.<br/><br/></p>"
+            "text": "<p>Sign up and unlock your instant discount.</p><p>*Limited to one use per customer.<br/></p>"
           }
         },
         "email_form_pmr3jm": {
